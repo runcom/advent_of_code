@@ -43,7 +43,6 @@ fn main() {
             if x == "" {
                 continue;
             }
-            // print!("{}\n", x.as_bytes()[i as usize] as char);
             *map.entry(x.as_bytes()[i as usize]).or_insert(0) += 1;
         }
         for (k, v) in &map {
