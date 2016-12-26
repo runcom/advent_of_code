@@ -1,0 +1,23 @@
+extern crate crypto;
+
+use crypto::md5::Md5;
+use crypto::digest::Digest;
+
+fn main() {
+    let path = include_str!("../../input/day5");
+    let input = path.trim();
+    let mut done = false;
+    let mut i = 0;
+
+    let mut hasher = Md5::new();
+    let s = "hi there!";
+    hasher.input_str(&s);
+    let hash = hasher.result_str();
+    print!("{}", hash);
+
+    while !done {
+        i += 1;
+        done = true;
+    }
+    // print!("{}\n", acc)
+}
